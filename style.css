@@ -1,3 +1,4 @@
+/* Geral */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     color: #333;
 }
 
+/* Cabeçalho */
 header {
     background-color: #2c3e50;
     color: white;
@@ -13,10 +15,8 @@ header {
     padding: 20px;
 }
 
-
-
+/* Estilo da seção principal */
 .hero {
-    /* background: url('imagens/jurista.jpg') no-repeat center center/cover; */
     height: 300px;
     display: flex;
     align-items: center;
@@ -41,40 +41,33 @@ header {
     border-radius: 5px;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-#vani{
-    background: #e67e22;
-    text-align: right;
-}
+/* Seção do jurista */
 #vani {
-    display: flex; /* Usa flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 20px; /* Espaço entre a imagem e o texto */
+    display: flex;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
     background-color: #e67e22;
     color: white;
 }
 
+/* Imagem do jurista */
 .jurista-img {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%; /* Deixa a imagem redonda (opcional) */
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
 }
 
+/* Texto ao lado da imagem */
 .header-text {
-    flex: 1; /* Faz o texto ocupar o espaço restante */
+    flex: 1;
 }
 
+/* Navbar */
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -84,12 +77,11 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    /* text-decoration: none; */
+    text-decoration: none;
     font-weight: bold;
 }
 
-
-
+/* Seção de serviços */
 h2 {
     color: #2c3e50;
 }
@@ -97,6 +89,7 @@ h2 {
 .services {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .service {
@@ -108,6 +101,7 @@ h2 {
     margin: 5px;
 }
 
+/* Formulário */
 form input, form textarea {
     width: 100%;
     padding: 10px;
@@ -116,6 +110,7 @@ form input, form textarea {
     border-radius: 5px;
 }
 
+/* Botões */
 button {
     background: #2c3e50;
     color: white;
@@ -125,6 +120,7 @@ button {
     border-radius: 5px;
 }
 
+/* Mensagem de sucesso */
 .success-message {
     display: none;
     color: green;
@@ -132,6 +128,7 @@ button {
     text-align: center;
 }
 
+/* Rodapé */
 footer {
     text-align: center;
     padding: 10px;
@@ -141,3 +138,41 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* 🔹🔹🔹 Responsividade 🔹🔹🔹 */
+
+/* Para dispositivos menores que 768px */
+@media (max-width: 768px) {
+    #vani {
+        flex-direction: column; /* Empilha imagem e texto */
+        text-align: center;
+    }
+
+    .jurista-img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    /* Navbar: Itens ficam empilhados */
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Seção de serviços */
+    .services {
+        flex-direction: column; /* Fica em coluna */
+    }
+
+    /* Botões ajustados */
+    .btn, button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
